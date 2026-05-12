@@ -8,7 +8,7 @@
 const Reviews = {
 
   /* ── Storage key ──────────────────────────────────────── */
-  _key: (id) => `saveur_reviews_${id}`,
+  _key: (id) => `recipe_reviews_${id}`,
 
   /* ── CRUD ─────────────────────────────────────────────── */
   getAll(recipeId) {
@@ -233,7 +233,7 @@ const Reviews = {
       yes:      '✓ Made this recipe',
       planning: '📌 Planning to cook',
       modified: '🔧 Made with modifications',
-      no:       ''
+      no:        ''
     }[r.made] || '';
 
     const diffLabel = {
