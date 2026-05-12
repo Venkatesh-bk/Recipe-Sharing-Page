@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   SAVEUR  ·  app.js
+   app.js
    Main application: filter, search, sort, render,
    modal lifecycle, tab switching, toast, helpers
    ═══════════════════════════════════════════════════════════ */
@@ -107,8 +107,8 @@ const App = {
 
     /* sort */
     const sortVal = document.getElementById('sortSelect')?.value || sort;
-    if (sortVal === 'rating')   list.sort((a, b) => b.rating - a.rating);
-    else if (sortVal === 'time') list.sort((a, b) => parseInt(a.time) - parseInt(b.time));
+    if (sortVal === 'rating')        list.sort((a, b) => b.rating - a.rating);
+    else if (sortVal === 'time')     list.sort((a, b) => parseInt(a.time) - parseInt(b.time));
     else if (sortVal === 'calories') list.sort((a, b) => a.calories - b.calories);
 
     this._renderGrid(list);
@@ -165,8 +165,8 @@ const App = {
      RENDER GRID
   ════════════════════════════════════════════════════════ */
   _renderGrid(list) {
-    const grid   = document.getElementById('recipeGrid');
-    const noRes  = document.getElementById('noResults');
+    const grid  = document.getElementById('recipeGrid');
+    const noRes = document.getElementById('noResults');
     if (!grid) return;
 
     if (!list.length) {
@@ -414,7 +414,7 @@ const App = {
                 ['🍞 Carbs',     r.nutrition.carbs],
                 ['🫒 Fat',       r.nutrition.fat],
                 ['🌿 Fibre',     r.nutrition.fiber],
-                ['🔥 Calories', r.calories + ' kcal'],
+                ['🔥 Calories',  r.calories + ' kcal'],
                 ['👤 Servings',  r.servings + ' people']
               ].map(([label, val]) => `
                 <div style="display:flex;justify-content:space-between;
