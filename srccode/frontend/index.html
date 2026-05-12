@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Saveur — Professional recipe discovery with authentic origins, ingredients, cooking methods, health benefits, and community reviews.">
+  <title>Saveur — World Recipe Discovery</title>
+
+  <!-- ── Google Fonts ───────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- ── Stylesheet ─────────────────────────────────────── -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="logo" href="#home" aria-label="Saveur home">Sav<em>eur</em></a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#discover">Discover</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#discover" onclick="App.resetFilters()">All Cuisines</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn-ghost" onclick="App.openRandom()" aria-label="Open a random recipe">
+          🎲 Surprise Me
+        </button>
+        <button class="btn-primary"
+          onclick="document.getElementById('discover').scrollIntoView({behavior:'smooth'})"
+          aria-label="Browse recipes">
+          Browse Recipes
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════════════ -->
+  <section class="hero" id="home" aria-label="Hero section">
+    <div class="hero-content">
+      <span class="hero-eyebrow">🌍 22 Recipes · 11 Cuisines · 1 Platform</span>
+
+      <h1>
+        Discover the Art of<br>
+        <em>World Cuisine</em>
+      </h1>
+
+      <p>
+        Hand-curated professional recipes with authentic origins, step-by-step
+        methods, nutritional benefits, and real community reviews — all in one place.
+      </p>
+
+      <div class="hero-actions">
+        <button class="btn-hero-primary"
+          onclick="document.getElementById('discover').scrollIntoView({behavior:'smooth'})">
+          Explore Recipes <span aria-hidden="true">→</span>
+        </button>
+        <button class="btn-hero-ghost" onclick="App.openRandom()">
+          Random Recipe 🎲
+        </button>
+      </div>
+
+      <div class="hero-stats" role="list" aria-label="Site statistics">
+        <div class="hstat" role="listitem">
+          <span class="hstat-n">22+</span>
+          <span class="hstat-l">Recipes</span>
+        </div>
+        <div class="hstat-div" aria-hidden="true"></div>
+        <div class="hstat" role="listitem">
+          <span class="hstat-n">11</span>
+          <span class="hstat-l">Cuisines</span>
+        </div>
+        <div class="hstat-div" aria-hidden="true"></div>
+        <div class="hstat" role="listitem">
+          <span class="hstat-n">4.8★</span>
+          <span class="hstat-l">Avg Rating</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Animated card grid (populated by app.js) -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-grid" id="heroGrid"></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       DISCOVER (Search + Filters + Grid)
+  ════════════════════════════════════════════════════ -->
+  <section class="discover-section" id="discover" aria-label="Recipe discovery">
+    <div class="container">
+
+      <!-- Search bar -->
+      <div class="search-wrapper" role="search">
+        <div class="search-box">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search by name, ingredient, or cuisine…"
+            aria-label="Search recipes"
+            oninput="App.filterRecipes()"
+            autocomplete="off">
+          <button
+            class="search-clear"
+            id="searchClear"
+            onclick="App.clearSearch()"
+            aria-label="Clear search"
+            style="display:none">✕</button>
+        </div>
+      </div>
+
+      <!-- Filter panel -->
+      <div class="filter-section" role="group" aria-label="Recipe filters">
+
+        <!-- Diet filter -->
+        <div class="filter-row">
+          <span class="filter-label" id="diet-label">Diet</span>
+          <div class="filter-chips" id="dietChips" role="group" aria-labelledby="diet-label">
+            <button class="chip active"     data-diet="all"     onclick="App.setDiet(this)"    aria-pressed="true">All</button>
+            <button class="chip veg-chip"   data-diet="veg"     onclick="App.setDiet(this)"    aria-pressed="false">🥦 Vegetarian</button>
+            <button class="chip nonveg-chip" data-diet="non-veg" onclick="App.setDiet(this)"   aria-pressed="false">🍗 Non-Vegetarian</button>
+          </div>
+        </div>
+
+        <!-- Cuisine filter -->
+        <div class="filter-row">
+          <span class="filter-label" id="cuisine-label">Cuisine</span>
+          <div class="filter-chips" id="cuisineChips" role="group" aria-labelledby="cuisine-label">
+            <button class="chip active"       data-cuisine="all"          onclick="App.setCuisine(this)" aria-pressed="true">🍽 All</button>
+            <button class="chip"              data-cuisine="Chinese"       onclick="App.setCuisine(this)">🇨🇳 Chinese</button>
+            <button class="chip"              data-cuisine="North Indian"  onclick="App.setCuisine(this)">🇮🇳 North Indian</button>
+            <button class="chip"              data-cuisine="South Indian"  onclick="App.setCuisine(this)">🌴 South Indian</button>
+            <button class="chip"              data-cuisine="Italian"       onclick="App.setCuisine(this)">🇮🇹 Italian</button>
+            <button class="chip"              data-cuisine="French"        onclick="App.setCuisine(this)">🇫🇷 French</button>
+            <button class="chip"              data-cuisine="Russian"       onclick="App.setCuisine(this)">🇷🇺 Russian</button>
+            <button class="chip"              data-cuisine="American"      onclick="App.setCuisine(this)">🇺🇸 American</button>
+            <button class="chip"              data-cuisine="European"      onclick="App.setCuisine(this)">🌍 European</button>
+            <button class="chip"              data-cuisine="Western"       onclick="App.setCuisine(this)">🥩 Western</button>
+            <button class="chip"              data-cuisine="Healthy"       onclick="App.setCuisine(this)">💚 Healthy</button>
+            <button class="chip"              data-cuisine="Traditional"   onclick="App.setCuisine(this)">🏺 Traditional</button>
+          </div>
+        </div>
+
+      </div><!-- /filter-section -->
+
+      <!-- Results bar -->
+      <div class="results-bar">
+        <span id="resultsCount" aria-live="polite">Showing 22 recipes</span>
+        <div class="sort-row">
+          <label for="sortSelect">Sort:</label>
+          <select id="sortSelect" onchange="App.filterRecipes()" aria-label="Sort recipes">
+            <option value="default">⭐ Featured</option>
+            <option value="rating">🏆 Highest Rated</option>
+            <option value="time">⚡ Quickest First</option>
+            <option value="calories">🥗 Lowest Calories</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Recipe grid (populated by app.js) -->
+      <div class="recipe-grid" id="recipeGrid" role="list" aria-label="Recipe cards"></div>
+
+      <!-- No results state -->
+      <div class="no-results" id="noResults" style="display:none" role="status" aria-live="polite">
+        <span aria-hidden="true">🍽️</span>
+        <h3>No recipes found</h3>
+        <p>Try adjusting your filters or search term.</p>
+        <button class="btn-primary" onclick="App.resetFilters()">Reset Filters</button>
+      </div>
+
+    </div><!-- /container -->
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       ABOUT STRIP
+  ════════════════════════════════════════════════════ -->
+  <section class="about-strip" id="about" aria-label="About Saveur">
+    <div class="container about-inner">
+      <div class="about-text">
+        <h2>Crafted for <em>Food Lovers</em></h2>
+        <p>
+          Every recipe on Saveur is curated for authenticity. We document the true origins,
+          traditional methods, and nutritional profiles of dishes from across the globe —
+          so you cook with knowledge, not just instructions.
+        </p>
+        <div class="about-points" role="list">
+          <div class="ap" role="listitem">
+            <span aria-hidden="true">🌿</span>
+            <div>
+              <strong>Authentic Origins</strong>
+              <p>Real culinary history and cultural context behind every dish.</p>
+            </div>
+          </div>
+          <div class="ap" role="listitem">
+            <span aria-hidden="true">👨‍🍳</span>
+            <div>
+              <strong>Step-by-Step Methods</strong>
+              <p>Professional techniques explained simply for every skill level.</p>
+            </div>
+          </div>
+          <div class="ap" role="listitem">
+            <span aria-hidden="true">💬</span>
+            <div>
+              <strong>Community Reviews</strong>
+              <p>Real feedback from home cooks around the world — honest and detailed.</p>
+            </div>
+          </div>
+          <div class="ap" role="listitem">
+            <span aria-hidden="true">💚</span>
+            <div>
+              <strong>Nutritional Insights</strong>
+              <p>Health benefits and full macro breakdowns for every recipe.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Emoji mosaic (populated by app.js) -->
+      <div class="about-emojis" aria-hidden="true">
+        <div class="emoji-mosaic" id="emojiMosaic"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <strong>Saveur</strong> &nbsp;·&nbsp;
+    World Recipe Discovery &nbsp;·&nbsp;
+    <span>© 2025 All rights reserved</span>
+  </footer>
+
+  <!-- ════════════════════════════════════════════════════
+       RECIPE MODAL OVERLAY
+  ════════════════════════════════════════════════════ -->
+  <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="Recipe detail">
+    <div class="modal" id="modal">
+      <div id="modalInner"></div>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <!-- ════════════════════════════════════════════════════
+       SCRIPTS  (order matters: data → reviews → app)
+  ════════════════════════════════════════════════════ -->
+  <script src="js/data.js"></script>
+  <script src="js/reviews.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
