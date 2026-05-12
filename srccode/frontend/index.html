@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- ── Stylesheet ─────────────────────────────────────── -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -31,7 +31,7 @@
 
       <div class="nav-actions">
         <button class="btn-ghost" onclick="App.openRandom()" aria-label="Open a random recipe">
-          🎲 Surprise Me
+           Surprise Me
         </button>
         <button class="btn-primary"
           onclick="document.getElementById('discover').scrollIntoView({behavior:'smooth'})"
@@ -47,7 +47,7 @@
   ════════════════════════════════════════════════════ -->
   <section class="hero" id="home" aria-label="Hero section">
     <div class="hero-content">
-      <span class="hero-eyebrow">🌍 22 Recipes · 11 Cuisines · 1 Platform</span>
+      <span class="hero-eyebrow"> 22 Recipes · 11 Cuisines · 1 Platform</span>
 
       <h1>
         Discover the Art of<br>
@@ -65,7 +65,7 @@
           Explore Recipes <span aria-hidden="true">→</span>
         </button>
         <button class="btn-hero-ghost" onclick="App.openRandom()">
-          Random Recipe 🎲
+          Random Recipe 
         </button>
       </div>
 
@@ -126,8 +126,8 @@
         <div class="filter-row">
           <span class="filter-label" id="diet-label">Diet</span>
           <div class="filter-chips" id="dietChips" role="group" aria-labelledby="diet-label">
-            <button class="chip active"     data-diet="all"     onclick="App.setDiet(this)"    aria-pressed="true">All</button>
-            <button class="chip veg-chip"   data-diet="veg"     onclick="App.setDiet(this)"    aria-pressed="false">🥦 Vegetarian</button>
+            <button class="chip active"      data-diet="all"     onclick="App.setDiet(this)"   aria-pressed="true">All</button>
+            <button class="chip veg-chip"    data-diet="veg"     onclick="App.setDiet(this)"   aria-pressed="false">🥦 Vegetarian</button>
             <button class="chip nonveg-chip" data-diet="non-veg" onclick="App.setDiet(this)"   aria-pressed="false">🍗 Non-Vegetarian</button>
           </div>
         </div>
@@ -136,18 +136,18 @@
         <div class="filter-row">
           <span class="filter-label" id="cuisine-label">Cuisine</span>
           <div class="filter-chips" id="cuisineChips" role="group" aria-labelledby="cuisine-label">
-            <button class="chip active"       data-cuisine="all"          onclick="App.setCuisine(this)" aria-pressed="true">🍽 All</button>
-            <button class="chip"              data-cuisine="Chinese"       onclick="App.setCuisine(this)">🇨🇳 Chinese</button>
-            <button class="chip"              data-cuisine="North Indian"  onclick="App.setCuisine(this)">🇮🇳 North Indian</button>
-            <button class="chip"              data-cuisine="South Indian"  onclick="App.setCuisine(this)">🌴 South Indian</button>
-            <button class="chip"              data-cuisine="Italian"       onclick="App.setCuisine(this)">🇮🇹 Italian</button>
-            <button class="chip"              data-cuisine="French"        onclick="App.setCuisine(this)">🇫🇷 French</button>
-            <button class="chip"              data-cuisine="Russian"       onclick="App.setCuisine(this)">🇷🇺 Russian</button>
-            <button class="chip"              data-cuisine="American"      onclick="App.setCuisine(this)">🇺🇸 American</button>
-            <button class="chip"              data-cuisine="European"      onclick="App.setCuisine(this)">🌍 European</button>
-            <button class="chip"              data-cuisine="Western"       onclick="App.setCuisine(this)">🥩 Western</button>
-            <button class="chip"              data-cuisine="Healthy"       onclick="App.setCuisine(this)">💚 Healthy</button>
-            <button class="chip"              data-cuisine="Traditional"   onclick="App.setCuisine(this)">🏺 Traditional</button>
+            <button class="chip active" data-cuisine="all"         onclick="App.setCuisine(this)" aria-pressed="true">🍽 All</button>
+            <button class="chip"        data-cuisine="Chinese"      onclick="App.setCuisine(this)">🇨🇳 Chinese</button>
+            <button class="chip"        data-cuisine="North Indian" onclick="App.setCuisine(this)">🇮🇳 North Indian</button>
+            <button class="chip"        data-cuisine="South Indian" onclick="App.setCuisine(this)">🌴 South Indian</button>
+            <button class="chip"        data-cuisine="Italian"      onclick="App.setCuisine(this)">🇮🇹 Italian</button>
+            <button class="chip"        data-cuisine="French"       onclick="App.setCuisine(this)">🇫🇷 French</button>
+            <button class="chip"        data-cuisine="Russian"      onclick="App.setCuisine(this)">🇷🇺 Russian</button>
+            <button class="chip"        data-cuisine="American"     onclick="App.setCuisine(this)">🇺🇸 American</button>
+            <button class="chip"        data-cuisine="European"     onclick="App.setCuisine(this)"> European</button>
+            <button class="chip"        data-cuisine="Western"      onclick="App.setCuisine(this)"> Western</button>
+            <button class="chip"        data-cuisine="Healthy"      onclick="App.setCuisine(this)"> Healthy</button>
+            <button class="chip"        data-cuisine="Traditional"  onclick="App.setCuisine(this)"> Traditional</button>
           </div>
         </div>
 
@@ -159,10 +159,10 @@
         <div class="sort-row">
           <label for="sortSelect">Sort:</label>
           <select id="sortSelect" onchange="App.filterRecipes()" aria-label="Sort recipes">
-            <option value="default">⭐ Featured</option>
-            <option value="rating">🏆 Highest Rated</option>
-            <option value="time">⚡ Quickest First</option>
-            <option value="calories">🥗 Lowest Calories</option>
+            <option value="default"> Featured</option>
+            <option value="rating"> Highest Rated</option>
+            <option value="time"> Quickest First</option>
+            <option value="calories"> Lowest Calories</option>
           </select>
         </div>
       </div>
@@ -172,7 +172,7 @@
 
       <!-- No results state -->
       <div class="no-results" id="noResults" style="display:none" role="status" aria-live="polite">
-        <span aria-hidden="true">🍽️</span>
+        <span aria-hidden="true"></span>
         <h3>No recipes found</h3>
         <p>Try adjusting your filters or search term.</p>
         <button class="btn-primary" onclick="App.resetFilters()">Reset Filters</button>
@@ -195,28 +195,28 @@
         </p>
         <div class="about-points" role="list">
           <div class="ap" role="listitem">
-            <span aria-hidden="true">🌿</span>
+            <span aria-hidden="true"></span>
             <div>
               <strong>Authentic Origins</strong>
               <p>Real culinary history and cultural context behind every dish.</p>
             </div>
           </div>
           <div class="ap" role="listitem">
-            <span aria-hidden="true">👨‍🍳</span>
+            <span aria-hidden="true"></span>
             <div>
               <strong>Step-by-Step Methods</strong>
               <p>Professional techniques explained simply for every skill level.</p>
             </div>
           </div>
           <div class="ap" role="listitem">
-            <span aria-hidden="true">💬</span>
+            <span aria-hidden="true"></span>
             <div>
               <strong>Community Reviews</strong>
               <p>Real feedback from home cooks around the world — honest and detailed.</p>
             </div>
           </div>
           <div class="ap" role="listitem">
-            <span aria-hidden="true">💚</span>
+            <span aria-hidden="true"></span>
             <div>
               <strong>Nutritional Insights</strong>
               <p>Health benefits and full macro breakdowns for every recipe.</p>
@@ -256,9 +256,9 @@
   <!-- ════════════════════════════════════════════════════
        SCRIPTS  (order matters: data → reviews → app)
   ════════════════════════════════════════════════════ -->
-  <script src="js/data.js"></script>
-  <script src="js/reviews.js"></script>
-  <script src="js/app.js"></script>
+  <script src="data.js"></script>
+  <script src="reviews.js"></script>
+  <script src="app.js"></script>
 
 </body>
 </html>
