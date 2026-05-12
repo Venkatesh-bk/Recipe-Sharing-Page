@@ -1,36 +1,26 @@
-// ─────────────────────────────────────────────────────────────────
-//   ·  Recipe Data
-//  Cuisines: Chinese | North Indian | South Indian | Italian |
-//            French | Russian | American | European | Western |
-//            Healthy | Traditional
-//  Diet:     veg | non-veg
-// ─────────────────────────────────────────────────────────────────
+// data.js — All recipe data
+// Cuisines: Chinese | North Indian | South Indian | Italian | French |
+//           Russian | American | European | Western | Healthy | Traditional
+// Diet: veg | non-veg
 
 const RECIPES = [
 
-  /* ── 1. CHINESE ──────────────────────────────────────────── */
   {
-    id: 1,
-    name: "Kung Pao Chicken",
-    emoji: "🐓",
+    id: 1, name: "Kung Pao Chicken", emoji: "🐓",
     bg: "linear-gradient(135deg,#ff6b35,#f7931e)",
-    cuisine: "Chinese",
-    diet: "non-veg",
+    cuisine: "Chinese", diet: "non-veg",
     tags: ["spicy","quick","wok","stir-fry"],
     time: "25 min", servings: 3, difficulty: "Medium",
     calories: 380, rating: 4.7, ratingCount: 142,
     description: "A fiery Sichuan stir-fry of tender chicken, dried chilies, crunchy peanuts, and scallions in a bold, glossy sauce.",
     origin: "Sichuan Province, China",
-    originStory: "Kung Pao Chicken (宫保鸡丁) is named after Ding Baozhen, a Qing dynasty governor of Sichuan in the 1800s who loved this dish. After his death, the imperial court granted him the honorary title 'Gong Bao' (Palatial Guardian), and the signature dish of his table was named in his memory. It became one of China's most internationally recognised dishes by the 20th century.",
+    originStory: "Kung Pao Chicken (宫保鸡丁) is named after Ding Baozhen, a Qing dynasty governor of Sichuan in the 1800s who loved this dish. After his death the imperial court granted him the honorary title 'Gong Bao' (Palatial Guardian), and the signature dish of his table was named in his memory.",
     ingredients: [
-      "500g chicken breast, cubed", "8–10 dried red chilies",
-      "3 tbsp soy sauce", "2 tbsp Shaoxing rice wine",
-      "1 tbsp hoisin sauce", "1 tsp dark soy sauce",
-      "1 tsp cornstarch", "2 tsp Sichuan peppercorns",
-      "4 garlic cloves, minced", "1-inch ginger, julienned",
-      "100g roasted peanuts", "5 spring onions",
-      "2 tbsp vegetable oil", "1 tsp sesame oil",
-      "1 tsp sugar", "1 tsp rice vinegar"
+      "500g chicken breast, cubed","8–10 dried red chilies","3 tbsp soy sauce",
+      "2 tbsp Shaoxing rice wine","1 tbsp hoisin sauce","1 tsp dark soy sauce",
+      "1 tsp cornstarch","2 tsp Sichuan peppercorns","4 garlic cloves, minced",
+      "1-inch ginger, julienned","100g roasted peanuts","5 spring onions",
+      "2 tbsp vegetable oil","1 tsp sesame oil","1 tsp sugar","1 tsp rice vinegar"
     ],
     steps: [
       "Marinate cubed chicken in soy sauce, Shaoxing wine, and cornstarch for 15 minutes.",
@@ -51,25 +41,20 @@ const RECIPES = [
   },
 
   {
-    id: 2,
-    name: "Vegetable Spring Rolls",
-    emoji: "🥢",
+    id: 2, name: "Vegetable Spring Rolls", emoji: "🥢",
     bg: "linear-gradient(135deg,#43cea2,#185a9d)",
-    cuisine: "Chinese",
-    diet: "veg",
+    cuisine: "Chinese", diet: "veg",
     tags: ["crispy","snack","appetizer","quick"],
     time: "30 min", servings: 4, difficulty: "Easy",
     calories: 220, rating: 4.5, ratingCount: 98,
     description: "Golden, shatteringly crisp parcels filled with seasoned cabbage, carrots, mushrooms, and glass noodles.",
     origin: "Eastern China",
-    originStory: "Spring rolls trace back to the Eastern Jin dynasty (265–420 AD), where thin pancakes filled with fresh spring vegetables were eaten to celebrate the Lunar New Year — representing good fortune and prosperity. The deep-fried version popular today emerged during the Tang dynasty and spread across Southeast Asia through Chinese diaspora communities.",
+    originStory: "Spring rolls trace back to the Eastern Jin dynasty (265–420 AD), where thin pancakes filled with fresh spring vegetables were eaten to celebrate the Lunar New Year. The deep-fried version popular today emerged during the Tang dynasty.",
     ingredients: [
-      "12 spring roll wrappers", "200g shredded cabbage",
-      "2 carrots, julienned", "100g shiitake mushrooms, sliced",
-      "80g glass noodles (soaked)", "3 spring onions",
-      "2 garlic cloves, minced", "2 tbsp soy sauce",
-      "1 tsp sesame oil", "1 tsp oyster-style sauce",
-      "Salt & white pepper", "Oil for deep frying",
+      "12 spring roll wrappers","200g shredded cabbage","2 carrots, julienned",
+      "100g shiitake mushrooms, sliced","80g glass noodles (soaked)","3 spring onions",
+      "2 garlic cloves, minced","2 tbsp soy sauce","1 tsp sesame oil",
+      "1 tsp oyster-style sauce","Salt & white pepper","Oil for deep frying",
       "Sweet chili sauce to serve"
     ],
     steps: [
@@ -89,26 +74,22 @@ const RECIPES = [
     nutrition: { protein: "6g", carbs: "34g", fat: "8g", fiber: "4g" }
   },
 
-  /* ── 2. NORTH INDIAN ─────────────────────────────────────── */
   {
-    id: 3,
-    name: "Butter Chicken",
-    emoji: "🍗",
+    id: 3, name: "Butter Chicken", emoji: "🍗",
     bg: "linear-gradient(135deg,#f7971e,#ffd200)",
-    cuisine: "North Indian",
-    diet: "non-veg",
+    cuisine: "North Indian", diet: "non-veg",
     tags: ["creamy","comfort","mild","popular"],
     time: "45 min", servings: 4, difficulty: "Easy",
     calories: 430, rating: 4.9, ratingCount: 312,
     description: "Grilled tandoori chicken simmered in a velvety, mildly spiced tomato-butter sauce — India's most beloved curry worldwide.",
     origin: "Delhi, India",
-    originStory: "Murgh Makhani (Butter Chicken) was born in 1948 at Moti Mahal restaurant in Daryaganj, Delhi, by Kundan Lal Gujral. He and fellow cook Kundan Lal Jaggi reportedly began simmering leftover tandoori chicken in a rich tomato, butter, and cream sauce to keep it moist. The dish became globally iconic and is credited with introducing Indian cuisine to the world.",
+    originStory: "Murgh Makhani was born in 1948 at Moti Mahal restaurant in Daryaganj, Delhi, by Kundan Lal Gujral. He began simmering leftover tandoori chicken in a rich tomato, butter, and cream sauce to keep it moist. The dish became globally iconic and is credited with introducing Indian cuisine to the world.",
     ingredients: [
-      "700g chicken thighs", "1 cup plain yogurt", "2 tbsp tandoori spice mix",
-      "400g crushed tomatoes", "4 tbsp butter", "1 cup heavy cream",
-      "2 onions, diced", "4 garlic cloves", "1-inch ginger",
-      "1 tsp garam masala", "1 tsp kasuri methi (dried fenugreek)",
-      "1 tsp sugar", "Salt to taste", "Fresh coriander to garnish"
+      "700g chicken thighs","1 cup plain yogurt","2 tbsp tandoori spice mix",
+      "400g crushed tomatoes","4 tbsp butter","1 cup heavy cream",
+      "2 onions, diced","4 garlic cloves","1-inch ginger",
+      "1 tsp garam masala","1 tsp kasuri methi (dried fenugreek)",
+      "1 tsp sugar","Salt to taste","Fresh coriander to garnish"
     ],
     steps: [
       "Marinate chicken in yogurt and tandoori spice for minimum 2 hours.",
@@ -129,26 +110,23 @@ const RECIPES = [
   },
 
   {
-    id: 4,
-    name: "Dal Makhani",
-    emoji: "🫘",
+    id: 4, name: "Dal Makhani", emoji: "🫘",
     bg: "linear-gradient(135deg,#834d9b,#d04ed6)",
-    cuisine: "North Indian",
-    diet: "veg",
+    cuisine: "North Indian", diet: "veg",
     tags: ["slow-cooked","comfort","protein","popular"],
     time: "4 hrs", servings: 6, difficulty: "Medium",
     calories: 310, rating: 4.8, ratingCount: 204,
     description: "Slow-simmered whole black lentils and kidney beans in a rich, smoky tomato-butter sauce — the crown jewel of Punjabi cuisine.",
     origin: "Punjab, India",
-    originStory: "Dal Makhani originated at Moti Mahal, Delhi, alongside Butter Chicken. Kundan Lal Gujral slow-cooked black urad lentils overnight on dying embers — a technique called 'dum' — and enriched them with cream and butter. This slow-cook method was traditionally used by Punjabi farmers who left lentils simmering overnight, and the Moti Mahal version refined it into a restaurant masterpiece.",
+    originStory: "Dal Makhani originated at Moti Mahal, Delhi, alongside Butter Chicken. Kundan Lal Gujral slow-cooked black urad lentils overnight on dying embers — a technique called 'dum' — then enriched them with cream and butter.",
     ingredients: [
-      "250g whole black lentils (urad dal)", "50g kidney beans (rajma)",
-      "3 tbsp butter + 1 tbsp oil", "2 onions, finely chopped",
-      "4 garlic cloves, minced", "1-inch ginger, grated",
-      "400g crushed tomatoes", "1 cup heavy cream",
-      "1 tsp cumin seeds", "1 tsp garam masala",
-      "1 tsp chili powder", "½ tsp smoked paprika",
-      "Salt to taste", "Fresh coriander"
+      "250g whole black lentils (urad dal)","50g kidney beans (rajma)",
+      "3 tbsp butter + 1 tbsp oil","2 onions, finely chopped",
+      "4 garlic cloves, minced","1-inch ginger, grated",
+      "400g crushed tomatoes","1 cup heavy cream",
+      "1 tsp cumin seeds","1 tsp garam masala",
+      "1 tsp chili powder","½ tsp smoked paprika",
+      "Salt to taste","Fresh coriander"
     ],
     steps: [
       "Soak lentils and kidney beans overnight. Pressure-cook with salt until completely soft (4–5 whistles).",
@@ -168,28 +146,22 @@ const RECIPES = [
     nutrition: { protein: "16g", carbs: "40g", fat: "12g", fiber: "10g" }
   },
 
-  /* ── 3. SOUTH INDIAN ─────────────────────────────────────── */
   {
-    id: 5,
-    name: "Masala Dosa",
-    emoji: "🫓",
+    id: 5, name: "Masala Dosa", emoji: "🫓",
     bg: "linear-gradient(135deg,#f9d423,#f83600)",
-    cuisine: "South Indian",
-    diet: "veg",
+    cuisine: "South Indian", diet: "veg",
     tags: ["crispy","breakfast","fermented","traditional"],
     time: "40 min", servings: 4, difficulty: "Medium",
     calories: 280, rating: 4.8, ratingCount: 176,
     description: "Paper-thin, lacey fermented rice crepe filled with spiced potato masala, served with coconut chutney and sambar.",
     origin: "Udupi, Karnataka, India",
-    originStory: "Dosa originated in Udupi, Karnataka, with roots stretching back over 1,000 years, mentioned in Tamil Sangam literature. The Masala Dosa variant — stuffed with spiced potato — gained prominence in the Udupi restaurants of Mumbai in the early 20th century. Today it is South India's most iconic export and is listed among the world's 50 best foods.",
+    originStory: "Dosa originated in Udupi, Karnataka, with roots stretching back over 1,000 years. The Masala Dosa variant gained prominence in the Udupi restaurants of Mumbai in the early 20th century. Today it is South India's most iconic export and is listed among the world's 50 best foods.",
     ingredients: [
-      "2 cups parboiled rice", "½ cup split urad dal",
-      "1 tsp fenugreek seeds", "Salt + oil for cooking",
-      "4 boiled potatoes, mashed", "1 onion, sliced",
-      "2 green chilies", "1 tsp mustard seeds",
-      "10 curry leaves", "½ tsp turmeric",
-      "2 tbsp oil", "Fresh coriander",
-      "Coconut chutney to serve", "Sambar to serve"
+      "2 cups parboiled rice","½ cup split urad dal","1 tsp fenugreek seeds",
+      "Salt + oil for cooking","4 boiled potatoes, mashed","1 onion, sliced",
+      "2 green chilies","1 tsp mustard seeds","10 curry leaves",
+      "½ tsp turmeric","2 tbsp oil","Fresh coriander",
+      "Coconut chutney to serve","Sambar to serve"
     ],
     steps: [
       "Soak rice, urad dal, and fenugreek seeds separately for 6 hours. Grind to a smooth batter; ferment overnight.",
@@ -210,26 +182,23 @@ const RECIPES = [
   },
 
   {
-    id: 6,
-    name: "Chettinad Chicken Curry",
-    emoji: "🍲",
+    id: 6, name: "Chettinad Chicken Curry", emoji: "🍲",
     bg: "linear-gradient(135deg,#e96c00,#f5a623)",
-    cuisine: "South Indian",
-    diet: "non-veg",
+    cuisine: "South Indian", diet: "non-veg",
     tags: ["spicy","aromatic","bold","traditional"],
     time: "55 min", servings: 4, difficulty: "Hard",
     calories: 490, rating: 4.7, ratingCount: 88,
     description: "An intensely aromatic, fiery chicken curry from the Chettinad region featuring kalpasi, marathi mokku, and freshly ground spices.",
     origin: "Chettinad, Tamil Nadu, India",
-    originStory: "Chettinad cuisine developed among the Nattukotai Chettiars, a wealthy merchant community of Tamil Nadu's Karaikudi region. Their trade routes across Southeast Asia introduced spices like kalpasi (stone flower) and marathi mokku into Tamil cooking. The resulting cuisine is considered India's most spice-diverse and was largely unknown outside Tamil Nadu until the 1990s food renaissance.",
+    originStory: "Chettinad cuisine developed among the Nattukotai Chettiars, a wealthy merchant community of Tamil Nadu's Karaikudi region. Their trade routes across Southeast Asia introduced rare spices like kalpasi (stone flower) into Tamil cooking.",
     ingredients: [
-      "800g chicken, cut into pieces", "2 onions, finely chopped",
-      "3 tomatoes, chopped", "4 tbsp oil",
-      "2 tsp kalpasi (stone flower)", "1 tsp marathi mokku",
-      "2 tsp black pepper, freshly ground", "4 dried red chilies",
-      "1 tbsp coriander seeds", "1 tsp fennel seeds",
-      "6 garlic cloves", "1-inch ginger",
-      "2 sprigs curry leaves", "½ cup coconut milk", "Salt"
+      "800g chicken, cut into pieces","2 onions, finely chopped",
+      "3 tomatoes, chopped","4 tbsp oil",
+      "2 tsp kalpasi (stone flower)","1 tsp marathi mokku",
+      "2 tsp black pepper, freshly ground","4 dried red chilies",
+      "1 tbsp coriander seeds","1 tsp fennel seeds",
+      "6 garlic cloves","1-inch ginger",
+      "2 sprigs curry leaves","½ cup coconut milk","Salt"
     ],
     steps: [
       "Dry-roast black pepper, coriander, fennel, kalpasi, marathi mokku, and red chilies; grind to a coarse powder.",
@@ -249,24 +218,20 @@ const RECIPES = [
     nutrition: { protein: "44g", carbs: "14g", fat: "26g", fiber: "3g" }
   },
 
-  /* ── 4. ITALIAN ──────────────────────────────────────────── */
   {
-    id: 7,
-    name: "Spaghetti Carbonara",
-    emoji: "🍝",
+    id: 7, name: "Spaghetti Carbonara", emoji: "🍝",
     bg: "linear-gradient(135deg,#f7d000,#e07b39)",
-    cuisine: "Italian",
-    diet: "non-veg",
+    cuisine: "Italian", diet: "non-veg",
     tags: ["creamy","classic","quick","comfort"],
     time: "25 min", servings: 2, difficulty: "Medium",
     calories: 520, rating: 4.9, ratingCount: 267,
     description: "A silky Roman pasta of guanciale, eggs, and Pecorino Romano — no cream needed. Pure technique, pure flavour.",
     origin: "Rome, Italy",
-    originStory: "Carbonara's true origins are debated — the most compelling theory ties it to Italian charcoal workers (carbonai) who cooked this simple, satisfying dish on the job in the Apennine mountains. Others link it to post-WWII Roman trattorie influenced by American soldiers bringing bacon and eggs. By the 1950s it had become a quintessential Roman dish, fiercely protected against cream by every Roman nonna.",
+    originStory: "Carbonara's most compelling theory ties it to Italian charcoal workers (carbonai) who cooked this simple dish on the job. By the 1950s it had become a quintessential Roman dish, fiercely protected against cream by every Roman nonna.",
     ingredients: [
-      "200g spaghetti", "100g guanciale (or pancetta)",
-      "2 large eggs + 2 egg yolks", "80g Pecorino Romano, finely grated",
-      "30g Parmesan, grated", "Coarsely cracked black pepper", "Salt"
+      "200g spaghetti","100g guanciale (or pancetta)",
+      "2 large eggs + 2 egg yolks","80g Pecorino Romano, finely grated",
+      "30g Parmesan, grated","Coarsely cracked black pepper","Salt"
     ],
     steps: [
       "Cook spaghetti in generously salted boiling water until al dente. Reserve 1 cup pasta water.",
@@ -287,24 +252,21 @@ const RECIPES = [
   },
 
   {
-    id: 8,
-    name: "Margherita Pizza",
-    emoji: "🍕",
+    id: 8, name: "Margherita Pizza", emoji: "🍕",
     bg: "linear-gradient(135deg,#e74c3c,#c0392b)",
-    cuisine: "Italian",
-    diet: "veg",
+    cuisine: "Italian", diet: "veg",
     tags: ["classic","baked","comfort","quick"],
     time: "35 min", servings: 2, difficulty: "Medium",
     calories: 460, rating: 4.7, ratingCount: 198,
     description: "Naples' most iconic pizza — thin charred crust, San Marzano tomato, fresh mozzarella, and basil. Perfection in simplicity.",
     origin: "Naples, Italy",
-    originStory: "Legend holds that in 1889, Neapolitan pizzaiolo Raffaele Esposito created this pizza for Queen Margherita of Savoy, using tomato, mozzarella, and basil to represent the Italian flag's red, white, and green. Whether the story is apocryphal or not, the Margherita has become the world's most recognised pizza and the benchmark by which all pizzas are judged.",
+    originStory: "Legend holds that in 1889, Neapolitan pizzaiolo Raffaele Esposito created this pizza for Queen Margherita of Savoy, using tomato, mozzarella, and basil to represent the Italian flag's red, white, and green.",
     ingredients: [
-      "250g '00' flour (or bread flour)", "7g instant yeast",
-      "160ml warm water", "1 tsp salt", "1 tsp sugar", "1 tbsp olive oil",
-      "200g San Marzano tomatoes, crushed", "1 garlic clove",
-      "200g fresh mozzarella, torn", "Fresh basil leaves",
-      "Extra virgin olive oil to finish", "Sea salt flakes"
+      "250g '00' flour (or bread flour)","7g instant yeast",
+      "160ml warm water","1 tsp salt","1 tsp sugar","1 tbsp olive oil",
+      "200g San Marzano tomatoes, crushed","1 garlic clove",
+      "200g fresh mozzarella, torn","Fresh basil leaves",
+      "Extra virgin olive oil to finish","Sea salt flakes"
     ],
     steps: [
       "Mix flour, yeast, sugar, and salt. Add water and olive oil; knead 8 minutes until smooth. Rest 1 hour.",
@@ -324,23 +286,19 @@ const RECIPES = [
     nutrition: { protein: "22g", carbs: "62g", fat: "14g", fiber: "3g" }
   },
 
-  /* ── 5. FRENCH ───────────────────────────────────────────── */
   {
-    id: 9,
-    name: "Croissants",
-    emoji: "🥐",
+    id: 9, name: "Croissants", emoji: "🥐",
     bg: "linear-gradient(135deg,#f7cac9,#92a8d1)",
-    cuisine: "French",
-    diet: "veg",
+    cuisine: "French", diet: "veg",
     tags: ["baked","pastry","weekend","breakfast"],
     time: "4 hrs", servings: 8, difficulty: "Hard",
     calories: 340, rating: 4.8, ratingCount: 154,
     description: "Laminated butter pastry with a shattering crust, honeycomb crumb, and a depth of flavour that takes patience to achieve.",
     origin: "Vienna & Paris, France",
-    originStory: "The croissant's crescent shape traces to Austria's 'kipferl', but the laminated dough technique — alternating layers of dough and butter — was perfected by Viennese bakers who arrived in Paris in the 1830s. By the Belle Époque it had become synonymous with Parisian café culture. The French transformed an Austrian shape into a technical masterpiece requiring skill, cold butter, and precision.",
+    originStory: "The laminated dough technique was perfected by Viennese bakers who arrived in Paris in the 1830s. By the Belle Époque it had become synonymous with Parisian café culture. The French transformed an Austrian shape into a technical masterpiece.",
     ingredients: [
-      "500g bread flour", "10g salt", "80g caster sugar",
-      "7g instant yeast", "300ml cold whole milk",
+      "500g bread flour","10g salt","80g caster sugar",
+      "7g instant yeast","300ml cold whole milk",
       "280g unsalted butter, chilled (for laminating)",
       "1 egg + 1 tbsp milk (egg wash)"
     ],
@@ -363,26 +321,23 @@ const RECIPES = [
   },
 
   {
-    id: 10,
-    name: "Beef Bourguignon",
-    emoji: "🥩",
+    id: 10, name: "Beef Bourguignon", emoji: "🥩",
     bg: "linear-gradient(135deg,#7b4397,#dc2430)",
-    cuisine: "French",
-    diet: "non-veg",
+    cuisine: "French", diet: "non-veg",
     tags: ["slow-cook","braised","elegant","winter"],
     time: "3 hrs", servings: 6, difficulty: "Hard",
     calories: 580, rating: 4.9, ratingCount: 121,
     description: "Burgundy wine-braised beef with pearl onions, lardons, and mushrooms — the French bistro classic perfected by Julia Child.",
     origin: "Burgundy (Bourgogne), France",
-    originStory: "Beef Bourguignon is rooted in Burgundian peasant cooking — a practical method of tenderising tough beef cuts through slow braising in the region's celebrated Pinot Noir wine. The dish ascended from rustic origins to Parisian restaurant menus in the 20th century. Julia Child's 1961 televised version introduced it to American households and made it the defining dish of French home cooking abroad.",
+    originStory: "Beef Bourguignon is rooted in Burgundian peasant cooking — a practical method of tenderising tough beef cuts through slow braising in Pinot Noir. Julia Child's 1961 televised version introduced it to American households and made it the defining dish of French home cooking abroad.",
     ingredients: [
-      "1.5kg beef chuck or shin, cubed", "750ml Burgundy (Pinot Noir)",
-      "200g lardons (bacon lardons)", "200g pearl onions",
-      "300g button mushrooms", "3 carrots, sliced",
-      "1 onion, diced", "4 garlic cloves",
-      "2 tbsp tomato paste", "2 cups beef stock",
-      "Bouquet garni (thyme, bay, parsley)", "2 tbsp flour",
-      "3 tbsp butter + oil", "Salt & pepper"
+      "1.5kg beef chuck or shin, cubed","750ml Burgundy (Pinot Noir)",
+      "200g lardons (bacon lardons)","200g pearl onions",
+      "300g button mushrooms","3 carrots, sliced",
+      "1 onion, diced","4 garlic cloves",
+      "2 tbsp tomato paste","2 cups beef stock",
+      "Bouquet garni (thyme, bay, parsley)","2 tbsp flour",
+      "3 tbsp butter + oil","Salt & pepper"
     ],
     steps: [
       "Marinate beef in wine, carrots, garlic, and herbs overnight in the fridge.",
@@ -402,28 +357,24 @@ const RECIPES = [
     nutrition: { protein: "48g", carbs: "12g", fat: "28g", fiber: "3g" }
   },
 
-  /* ── 6. RUSSIAN ──────────────────────────────────────────── */
   {
-    id: 11,
-    name: "Beef Stroganoff",
-    emoji: "🫕",
+    id: 11, name: "Beef Stroganoff", emoji: "🫕",
     bg: "linear-gradient(135deg,#c94b4b,#4b134f)",
-    cuisine: "Russian",
-    diet: "non-veg",
+    cuisine: "Russian", diet: "non-veg",
     tags: ["creamy","comfort","quick","classic"],
     time: "35 min", servings: 4, difficulty: "Easy",
     calories: 510, rating: 4.6, ratingCount: 109,
     description: "Tender strips of sautéed beef in a tangy, creamy sour cream and mustard sauce — an aristocratic Russian classic.",
     origin: "St. Petersburg, Russia",
-    originStory: "Beef Stroganoff appears in Russian cookbooks as early as the 1860s, attributed to the household of Count Pavel Alexandrovich Stroganov, a prominent St. Petersburg aristocrat. The dish spread globally after Russian émigrés fled the 1917 revolution, becoming particularly popular in the United States and China, where Chinese-Russian restaurants made it a staple dish.",
+    originStory: "Beef Stroganoff appears in Russian cookbooks as early as the 1860s, attributed to the household of Count Pavel Alexandrovich Stroganov. It spread globally after Russian émigrés fled the 1917 revolution.",
     ingredients: [
       "700g beef sirloin or fillet, thinly sliced",
-      "1 onion, finely sliced", "300g button mushrooms, sliced",
-      "2 garlic cloves", "250ml sour cream",
-      "200ml beef stock", "2 tbsp Dijon mustard",
-      "2 tbsp butter", "1 tbsp oil",
-      "1 tbsp Worcestershire sauce", "1 tsp paprika",
-      "Salt & pepper", "Fresh dill to garnish",
+      "1 onion, finely sliced","300g button mushrooms, sliced",
+      "2 garlic cloves","250ml sour cream",
+      "200ml beef stock","2 tbsp Dijon mustard",
+      "2 tbsp butter","1 tbsp oil",
+      "1 tbsp Worcestershire sauce","1 tsp paprika",
+      "Salt & pepper","Fresh dill to garnish",
       "Egg noodles or rice to serve"
     ],
     steps: [
@@ -445,26 +396,22 @@ const RECIPES = [
   },
 
   {
-    id: 12,
-    name: "Borscht",
-    emoji: "🥣",
+    id: 12, name: "Borscht", emoji: "🥣",
     bg: "linear-gradient(135deg,#e91e8c,#1e3c72)",
-    cuisine: "Russian",
-    diet: "veg",
+    cuisine: "Russian", diet: "veg",
     tags: ["hearty","soup","traditional","healthy"],
     time: "1 hr", servings: 6, difficulty: "Easy",
     calories: 210, rating: 4.5, ratingCount: 76,
     description: "A vibrant, deeply flavoured beetroot soup with cabbage, potato, and a dollop of sour cream — Eastern Europe's most iconic bowl.",
     origin: "Ukraine / Russia",
-    originStory: "Borscht has been eaten in Eastern Europe for over 1,000 years, with origins in Ukraine, where it is considered a national dish. It spread through Imperial Russia and became one of the world's most recognised soups. The word 'borscht' comes from the ancient Slavic word for hogweed, an early ingredient. Today countless regional variations exist from Poland to Israel.",
+    originStory: "Borscht has been eaten in Eastern Europe for over 1,000 years, with origins in Ukraine, where it is considered a national dish. The word 'borscht' comes from the ancient Slavic word for hogweed, an early ingredient.",
     ingredients: [
-      "3 medium beetroot, peeled & grated",
-      "3 potatoes, diced", "¼ head cabbage, shredded",
-      "2 carrots, grated", "1 onion, diced",
-      "2 tomatoes, grated", "3 garlic cloves",
-      "1.5L vegetable stock", "2 tbsp red wine vinegar",
-      "2 tbsp tomato paste", "2 tbsp oil",
-      "1 bay leaf", "Fresh dill", "Sour cream to serve"
+      "3 medium beetroot, peeled & grated","3 potatoes, diced",
+      "¼ head cabbage, shredded","2 carrots, grated",
+      "1 onion, diced","2 tomatoes, grated","3 garlic cloves",
+      "1.5L vegetable stock","2 tbsp red wine vinegar",
+      "2 tbsp tomato paste","2 tbsp oil",
+      "1 bay leaf","Fresh dill","Sour cream to serve"
     ],
     steps: [
       "Sauté onion and carrots in oil 5 minutes. Add grated tomatoes and tomato paste; cook 5 minutes.",
@@ -484,28 +431,24 @@ const RECIPES = [
     nutrition: { protein: "5g", carbs: "38g", fat: "6g", fiber: "7g" }
   },
 
-  /* ── 7. AMERICAN ─────────────────────────────────────────── */
   {
-    id: 13,
-    name: "BBQ Baby Back Ribs",
-    emoji: "🍖",
+    id: 13, name: "BBQ Baby Back Ribs", emoji: "🍖",
     bg: "linear-gradient(135deg,#d31027,#ea384d)",
-    cuisine: "American",
-    diet: "non-veg",
+    cuisine: "American", diet: "non-veg",
     tags: ["smoky","BBQ","weekend","indulgent"],
     time: "3 hrs", servings: 4, difficulty: "Medium",
     calories: 690, rating: 4.8, ratingCount: 186,
     description: "Fall-off-the-bone pork ribs with a caramelised spice rub and sticky homemade barbecue glaze. The ultimate American cookout experience.",
     origin: "Memphis / Kansas City, USA",
-    originStory: "American barbecue ribs have deep roots in the traditions of enslaved African Americans in the South, who transformed cheap cuts into culinary masterpieces through slow-smoking techniques. Memphis and Kansas City developed distinct styles in the early 20th century — dry-rubbed vs sauce-glazed. Today BBQ ribs represent American comfort food culture at its most iconic.",
+    originStory: "American barbecue ribs have deep roots in the traditions of the American South. Memphis and Kansas City developed distinct styles in the early 20th century — dry-rubbed vs sauce-glazed. Today BBQ ribs represent American comfort food culture at its most iconic.",
     ingredients: [
-      "2 racks baby back pork ribs", "2 tbsp brown sugar",
-      "1 tbsp smoked paprika", "1 tsp garlic powder",
-      "1 tsp onion powder", "1 tsp cumin",
-      "½ tsp cayenne", "Salt & black pepper",
+      "2 racks baby back pork ribs","2 tbsp brown sugar",
+      "1 tbsp smoked paprika","1 tsp garlic powder",
+      "1 tsp onion powder","1 tsp cumin",
+      "½ tsp cayenne","Salt & black pepper",
       "BBQ Sauce: 200ml ketchup, 60ml apple cider vinegar",
-      "3 tbsp brown sugar", "2 tbsp Worcestershire sauce",
-      "1 tbsp Dijon mustard", "1 tsp smoked paprika"
+      "3 tbsp brown sugar","2 tbsp Worcestershire sauce",
+      "1 tbsp Dijon mustard","1 tsp smoked paprika"
     ],
     steps: [
       "Remove the silverskin membrane from the back of the ribs.",
@@ -526,26 +469,22 @@ const RECIPES = [
   },
 
   {
-    id: 14,
-    name: "Classic Mac & Cheese",
-    emoji: "🧀",
+    id: 14, name: "Classic Mac & Cheese", emoji: "🧀",
     bg: "linear-gradient(135deg,#f7971e,#ffd200)",
-    cuisine: "American",
-    diet: "veg",
+    cuisine: "American", diet: "veg",
     tags: ["comfort","baked","creamy","family"],
     time: "40 min", servings: 6, difficulty: "Easy",
     calories: 520, rating: 4.6, ratingCount: 142,
     description: "Creamy béchamel-based pasta baked with a golden breadcrumb crust — homemade American mac & cheese at its finest.",
     origin: "United States",
-    originStory: "Mac & Cheese has colonial American origins — Thomas Jefferson reportedly encountered a similar dish in France and served 'macaroni pie' at a White House dinner in 1802. The dish exploded in popularity when Kraft introduced the boxed version in 1937, a year after the Great Depression began. Homemade versions with béchamel and aged cheddar have experienced a renaissance in modern American cooking.",
+    originStory: "Mac & Cheese has colonial American origins — Thomas Jefferson reportedly served 'macaroni pie' at a White House dinner in 1802. The dish exploded in popularity when Kraft introduced the boxed version in 1937. Homemade versions with béchamel and aged cheddar have experienced a modern renaissance.",
     ingredients: [
-      "400g elbow macaroni", "4 tbsp butter",
-      "4 tbsp plain flour", "600ml whole milk",
-      "200ml heavy cream", "300g sharp cheddar, grated",
-      "100g Gruyère, grated", "1 tsp Dijon mustard",
-      "½ tsp cayenne pepper", "½ tsp garlic powder",
-      "Salt & white pepper",
-      "100g panko breadcrumbs", "2 tbsp melted butter (for topping)"
+      "400g elbow macaroni","4 tbsp butter","4 tbsp plain flour",
+      "600ml whole milk","200ml heavy cream",
+      "300g sharp cheddar, grated","100g Gruyère, grated",
+      "1 tsp Dijon mustard","½ tsp cayenne pepper",
+      "½ tsp garlic powder","Salt & white pepper",
+      "100g panko breadcrumbs","2 tbsp melted butter (for topping)"
     ],
     steps: [
       "Cook macaroni in salted water until very al dente (1 minute less than package). Drain.",
@@ -565,29 +504,24 @@ const RECIPES = [
     nutrition: { protein: "24g", carbs: "56g", fat: "26g", fiber: "2g" }
   },
 
-  /* ── 8. EUROPEAN ─────────────────────────────────────────── */
   {
-    id: 15,
-    name: "Spanish Paella",
-    emoji: "🥘",
+    id: 15, name: "Spanish Paella", emoji: "🥘",
     bg: "linear-gradient(135deg,#f7971e,#e74c3c)",
-    cuisine: "European",
-    diet: "non-veg",
+    cuisine: "European", diet: "non-veg",
     tags: ["saffron","seafood","rice","weekend"],
     time: "55 min", servings: 6, difficulty: "Hard",
     calories: 560, rating: 4.8, ratingCount: 167,
     description: "Valencia's iconic saffron-scented rice dish with prawns, mussels, and chicken, crowned by the prized caramelised socarrat crust.",
     origin: "Valencia, Spain",
-    originStory: "Paella is a Valencian dialect word for frying pan. Traditional paella began as a lunchtime meal for Valencian farmers, made with rabbit, snails, and vegetables cooked over orange wood fires in the fields. Seafood variants emerged in Valencia's coastal communities. The dish became internationally recognised in the 20th century as Spain's national dish, though Valencians insist theirs is the only authentic version.",
+    originStory: "Paella is a Valencian dialect word for frying pan. Traditional paella began as a lunchtime meal for Valencian farmers. The dish became internationally recognised in the 20th century as Spain's national dish.",
     ingredients: [
-      "400g bomba or paella rice", "1 pinch saffron threads",
-      "12 prawns, shell-on", "500g mussels, cleaned",
-      "4 chicken thighs", "200g squid rings",
-      "1 onion", "4 garlic cloves",
-      "2 tomatoes, grated", "1 red pepper, sliced",
-      "1.2L hot fish/chicken stock", "100ml white wine",
-      "2 tsp smoked paprika", "1 tsp sweet paprika",
-      "100ml olive oil", "Lemon wedges & parsley"
+      "400g bomba or paella rice","1 pinch saffron threads",
+      "12 prawns, shell-on","500g mussels, cleaned",
+      "4 chicken thighs","200g squid rings",
+      "1 onion","4 garlic cloves","2 tomatoes, grated",
+      "1 red pepper, sliced","1.2L hot fish/chicken stock","100ml white wine",
+      "2 tsp smoked paprika","1 tsp sweet paprika",
+      "100ml olive oil","Lemon wedges & parsley"
     ],
     steps: [
       "Steep saffron in 2 tbsp warm stock for 10 minutes.",
@@ -608,25 +542,22 @@ const RECIPES = [
   },
 
   {
-    id: 16,
-    name: "Ratatouille",
-    emoji: "🫑",
+    id: 16, name: "Ratatouille", emoji: "🫑",
     bg: "linear-gradient(135deg,#56ab2f,#a8e063)",
-    cuisine: "European",
-    diet: "veg",
+    cuisine: "European", diet: "veg",
     tags: ["healthy","baked","summer","traditional"],
     time: "1 hr", servings: 4, difficulty: "Easy",
     calories: 190, rating: 4.6, ratingCount: 88,
     description: "A Provençal roasted vegetable medley of courgette, aubergine, and tomato, perfumed with herbes de Provence. Simple. Sublime.",
     origin: "Provence, France",
-    originStory: "Ratatouille is a traditional Provençal dish from Nice, first recorded in the 18th century. Its name comes from the French 'touiller' (to toss food). Farmers would slow-stew seasonal summer vegetables together in olive oil — a practical way to use abundant harvests. The dish became globally famous through the 2007 Pixar film, which depicted a tian (layered) presentation of the classic stew.",
+    originStory: "Ratatouille is a traditional Provençal dish from Nice, first recorded in the 18th century. Farmers would slow-stew seasonal summer vegetables together in olive oil. The dish became globally famous through the 2007 Pixar film.",
     ingredients: [
-      "1 large aubergine, cubed", "2 courgettes, sliced",
-      "2 red peppers, chopped", "4 ripe tomatoes, chopped",
-      "1 onion, diced", "4 garlic cloves",
-      "100ml extra virgin olive oil", "1 tsp dried thyme",
-      "1 tsp dried rosemary", "1 bay leaf",
-      "Fresh basil to finish", "Salt & pepper"
+      "1 large aubergine, cubed","2 courgettes, sliced",
+      "2 red peppers, chopped","4 ripe tomatoes, chopped",
+      "1 onion, diced","4 garlic cloves",
+      "100ml extra virgin olive oil","1 tsp dried thyme",
+      "1 tsp dried rosemary","1 bay leaf",
+      "Fresh basil to finish","Salt & pepper"
     ],
     steps: [
       "Salt aubergine cubes; rest 20 minutes then rinse and pat dry.",
@@ -646,34 +577,30 @@ const RECIPES = [
     nutrition: { protein: "4g", carbs: "22g", fat: "10g", fiber: "8g" }
   },
 
-  /* ── 9. WESTERN ──────────────────────────────────────────── */
   {
-    id: 17,
-    name: "Grilled Ribeye Steak",
-    emoji: "🥩",
+    id: 17, name: "Grilled Ribeye Steak", emoji: "🥩",
     bg: "linear-gradient(135deg,#1a1a2e,#e94560)",
-    cuisine: "Western",
-    diet: "non-veg",
+    cuisine: "Western", diet: "non-veg",
     tags: ["grilled","quick","high-protein","premium"],
     time: "20 min", servings: 2, difficulty: "Medium",
     calories: 620, rating: 4.9, ratingCount: 203,
     description: "A well-marbled ribeye, seared to a perfect crust and basted with garlic herb butter — steak at its most elemental.",
     origin: "United States / Western Europe",
-    originStory: "The ribeye steak has its origins in British and French butchery traditions, where the 'entrecôte' (between the ribs cut) was prized for its marbling. In America, the cattle culture of Texas and the Midwest elevated steak to cultural icon status in the 19th century. The development of cast-iron cooking and then charcoal grills defined the modern American steakhouse tradition.",
+    originStory: "The ribeye steak has origins in British and French butchery traditions, where the 'entrecôte' was prized for its marbling. In America, the cattle culture of Texas elevated steak to cultural icon status in the 19th century.",
     ingredients: [
       "2 ribeye steaks (300g each, 2.5cm thick)",
       "2 tbsp neutral oil (avocado or grapeseed)",
-      "100g unsalted butter", "4 garlic cloves, crushed",
-      "4 sprigs fresh thyme", "3 sprigs fresh rosemary",
-      "Coarse sea salt", "Cracked black pepper",
+      "100g unsalted butter","4 garlic cloves, crushed",
+      "4 sprigs fresh thyme","3 sprigs fresh rosemary",
+      "Coarse sea salt","Cracked black pepper",
       "Watercress or rocket to serve"
     ],
     steps: [
       "Remove steak from fridge 45 minutes before cooking. Pat completely dry with paper towels.",
       "Season generously on all sides with coarse salt and cracked pepper.",
       "Heat a heavy cast-iron skillet until smoking over high heat. Add oil.",
-      "Lay steak away from you into the pan. Sear 2–3 minutes per side for medium-rare — press down for even contact.",
-      "Reduce heat to medium. Add butter, garlic, thyme, and rosemary. As butter foams, continuously baste steak.",
+      "Lay steak away from you into the pan. Sear 2–3 minutes per side for medium-rare.",
+      "Reduce heat to medium. Add butter, garlic, thyme, and rosemary. Continuously baste steak.",
       "Remove when internal temperature reaches 54°C (medium-rare). Rest on a wire rack 5 minutes.",
       "Slice against the grain. Serve on warmed plates with pan juices and fresh greens."
     ],
@@ -687,26 +614,23 @@ const RECIPES = [
   },
 
   {
-    id: 18,
-    name: "Caesar Salad",
-    emoji: "🥗",
+    id: 18, name: "Caesar Salad", emoji: "🥗",
     bg: "linear-gradient(135deg,#2c6e49,#4c956c)",
-    cuisine: "Western",
-    diet: "veg",
+    cuisine: "Western", diet: "veg",
     tags: ["fresh","quick","lunch","classic"],
     time: "20 min", servings: 2, difficulty: "Easy",
     calories: 280, rating: 4.5, ratingCount: 132,
     description: "Crisp romaine, hand-made Caesar dressing, house croutons, and shaved Parmesan — an American icon with surprising Mexican origins.",
     origin: "Tijuana, Mexico / California",
-    originStory: "Caesar Salad was invented by Italian-Mexican restaurateur Caesar Cardini in 1924 at his Tijuana restaurant, allegedly improvised on a busy 4th of July weekend when supplies were running low. American tourists crossing the border spread its fame, and it became a Hollywood staple. The original recipe was tossed tableside with raw egg, lemon, Worcestershire sauce, and good olive oil.",
+    originStory: "Caesar Salad was invented by Italian-Mexican restaurateur Caesar Cardini in 1924 at his Tijuana restaurant, allegedly improvised on a busy 4th of July weekend when supplies were running low.",
     ingredients: [
-      "2 heads romaine lettuce, torn", "100g Parmesan, shaved",
+      "2 heads romaine lettuce, torn","100g Parmesan, shaved",
       "2 slices thick sourdough bread, cubed (croutons)",
-      "3 tbsp extra virgin olive oil", "1 garlic clove",
-      "Dressing: 1 egg yolk", "1 tsp Dijon mustard",
-      "1 tbsp Worcestershire sauce", "2 tbsp lemon juice",
-      "1 garlic clove, minced", "80ml extra virgin olive oil",
-      "30g Parmesan, finely grated", "Salt & pepper"
+      "3 tbsp extra virgin olive oil","1 garlic clove",
+      "Dressing: 1 egg yolk","1 tsp Dijon mustard",
+      "1 tbsp Worcestershire sauce","2 tbsp lemon juice",
+      "1 garlic clove, minced","80ml extra virgin olive oil",
+      "30g Parmesan, finely grated","Salt & pepper"
     ],
     steps: [
       "Make croutons: toss bread cubes with olive oil and a crushed garlic clove. Bake at 200°C 12 minutes until golden.",
@@ -726,25 +650,21 @@ const RECIPES = [
     nutrition: { protein: "14g", carbs: "22g", fat: "18g", fiber: "4g" }
   },
 
-  /* ── 10. HEALTHY ─────────────────────────────────────────── */
   {
-    id: 19,
-    name: "Quinoa Buddha Bowl",
-    emoji: "🥙",
+    id: 19, name: "Quinoa Buddha Bowl", emoji: "🥙",
     bg: "linear-gradient(135deg,#11998e,#38ef7d)",
-    cuisine: "Healthy",
-    diet: "veg",
+    cuisine: "Healthy", diet: "veg",
     tags: ["nutritious","quick","meal-prep","gluten-free"],
     time: "30 min", servings: 2, difficulty: "Easy",
     calories: 420, rating: 4.7, ratingCount: 119,
     description: "A nourishing bowl of fluffy quinoa, roasted sweet potato, edamame, avocado, and tahini dressing — a complete meal in one.",
     origin: "Modern Wellness Cuisine",
-    originStory: "The Buddha Bowl concept emerged from Western health-food culture in the early 2010s, inspired by the Buddhist tradition of monks carrying bowls to collect plant-based foods. The name evokes a rounded, overflowing bowl like the belly of a laughing Buddha. It embodies the modern nutritional principle of building meals around a grain base with diverse colourful plant foods.",
+    originStory: "The Buddha Bowl concept emerged from Western health-food culture in the early 2010s, inspired by the Buddhist tradition of monks carrying bowls to collect plant-based foods.",
     ingredients: [
-      "200g quinoa", "1 sweet potato, cubed",
-      "100g frozen edamame, shelled", "1 avocado",
-      "100g kale or spinach", "1 can chickpeas, drained",
-      "2 tbsp olive oil", "1 tsp cumin", "1 tsp smoked paprika",
+      "200g quinoa","1 sweet potato, cubed",
+      "100g frozen edamame, shelled","1 avocado",
+      "100g kale or spinach","1 can chickpeas, drained",
+      "2 tbsp olive oil","1 tsp cumin","1 tsp smoked paprika",
       "Tahini Dressing: 3 tbsp tahini, 2 tbsp lemon juice",
       "1 garlic clove, 1 tbsp olive oil, 2–3 tbsp warm water",
       "Salt to taste"
@@ -768,27 +688,24 @@ const RECIPES = [
   },
 
   {
-    id: 20,
-    name: "Grilled Salmon & Asparagus",
-    emoji: "🐟",
+    id: 20, name: "Grilled Salmon & Asparagus", emoji: "🐟",
     bg: "linear-gradient(135deg,#0f3443,#34e89e)",
-    cuisine: "Healthy",
-    diet: "non-veg",
+    cuisine: "Healthy", diet: "non-veg",
     tags: ["omega-3","quick","light","nutritious"],
     time: "20 min", servings: 2, difficulty: "Easy",
     calories: 390, rating: 4.8, ratingCount: 145,
     description: "Crispy-skinned salmon fillet with lemon-herb grilled asparagus and a bright dill yogurt sauce — fast, elegant, deeply nourishing.",
     origin: "Nordic / Pacific Northwest",
-    originStory: "Salmon has been the cornerstone of indigenous Pacific Northwest diets for thousands of years, revered by cultures including the Haida and Chinook. Nordic countries have grilled and smoked salmon for millennia. The modern grilled salmon with vegetables emerged from the clean-eating movement of the 1980s–90s and became a staple of health-conscious fine dining worldwide.",
+    originStory: "Salmon has been the cornerstone of indigenous Pacific Northwest diets for thousands of years. The modern grilled salmon with vegetables emerged from the clean-eating movement of the 1980s–90s and became a staple of health-conscious fine dining worldwide.",
     ingredients: [
       "2 salmon fillets (200g each), skin-on",
       "1 bunch asparagus, trimmed",
-      "3 tbsp olive oil", "1 lemon (zest + juice)",
-      "2 garlic cloves, minced", "1 tbsp fresh dill",
+      "3 tbsp olive oil","1 lemon (zest + juice)",
+      "2 garlic cloves, minced","1 tbsp fresh dill",
       "Salt & cracked pepper",
       "Dill Sauce: 150g Greek yogurt",
-      "2 tbsp fresh dill", "1 tbsp lemon juice",
-      "1 tsp Dijon mustard", "Salt"
+      "2 tbsp fresh dill","1 tbsp lemon juice",
+      "1 tsp Dijon mustard","Salt"
     ],
     steps: [
       "Pat salmon dry. Score the skin with a sharp knife 3 times to prevent curling.",
@@ -808,27 +725,23 @@ const RECIPES = [
     nutrition: { protein: "44g", carbs: "10g", fat: "22g", fiber: "4g" }
   },
 
-  /* ── 11. TRADITIONAL ─────────────────────────────────────── */
   {
-    id: 21,
-    name: "Shakshuka",
-    emoji: "🍳",
+    id: 21, name: "Shakshuka", emoji: "🍳",
     bg: "linear-gradient(135deg,#f7b733,#fc4a1a)",
-    cuisine: "Traditional",
-    diet: "veg",
+    cuisine: "Traditional", diet: "veg",
     tags: ["quick","brunch","spiced","one-pan"],
     time: "25 min", servings: 2, difficulty: "Easy",
     calories: 280, rating: 4.8, ratingCount: 176,
     description: "Eggs poached in a smoky, cumin-scented tomato and pepper sauce, topped with crumbled feta and herbs. One pan. Fifteen minutes.",
     origin: "North Africa / Levant",
-    originStory: "Shakshuka's origins lie in North Africa — most likely in Libya or Tunisia, where a similar tomato-pepper-egg stew has been made for centuries. The word may derive from the Berber or Arabic word for 'mixed' or 'shaken'. Sephardic Jewish communities carried it to Israel, where it became a national breakfast institution. Its global popularity exploded in the 2010s through food media.",
+    originStory: "Shakshuka's origins lie in North Africa — most likely in Libya or Tunisia. Sephardic Jewish communities carried it to Israel, where it became a national breakfast institution. Its global popularity exploded in the 2010s through food media.",
     ingredients: [
-      "4 large eggs", "400g crushed tomatoes",
-      "2 red bell peppers, diced", "1 onion, diced",
-      "3 garlic cloves, minced", "1 tsp ground cumin",
-      "1 tsp smoked paprika", "½ tsp coriander",
-      "¼ tsp chili flakes", "100g feta cheese",
-      "3 tbsp olive oil", "Fresh parsley & mint",
+      "4 large eggs","400g crushed tomatoes",
+      "2 red bell peppers, diced","1 onion, diced",
+      "3 garlic cloves, minced","1 tsp ground cumin",
+      "1 tsp smoked paprika","½ tsp coriander",
+      "¼ tsp chili flakes","100g feta cheese",
+      "3 tbsp olive oil","Fresh parsley & mint",
       "Crusty bread or pita to serve"
     ],
     steps: [
@@ -850,27 +763,24 @@ const RECIPES = [
   },
 
   {
-    id: 22,
-    name: "Moroccan Lamb Tagine",
-    emoji: "🫙",
+    id: 22, name: "Moroccan Lamb Tagine", emoji: "🫙",
     bg: "linear-gradient(135deg,#c94b4b,#e07b39)",
-    cuisine: "Traditional",
-    diet: "non-veg",
+    cuisine: "Traditional", diet: "non-veg",
     tags: ["slow-cook","aromatic","warming","exotic"],
     time: "2.5 hrs", servings: 6, difficulty: "Medium",
     calories: 540, rating: 4.9, ratingCount: 97,
     description: "Slow-braised lamb with preserved lemon, olives, saffron, and Ras el Hanout — the warmth of Marrakech in a single pot.",
     origin: "Morocco, North Africa",
-    originStory: "The tagine takes its name from the distinctive conical clay pot in which it is cooked, used since at least the 9th century in North Africa. The cooking vessel's design traps steam to keep meat tender in the desert climate. Moroccan tagine developed at the crossroads of Berber, Arab, and Andalusian culinary traditions, incorporating spices from the ancient Silk Road trading routes through Marrakech.",
+    originStory: "The tagine takes its name from the distinctive conical clay pot in which it is cooked, used since at least the 9th century in North Africa. Moroccan tagine developed at the crossroads of Berber, Arab, and Andalusian culinary traditions.",
     ingredients: [
       "1.2kg lamb shoulder, cut into chunks",
-      "2 onions, diced", "4 garlic cloves",
-      "1-inch fresh ginger, grated", "2 preserved lemon quarters",
-      "100g green olives", "400ml lamb or chicken stock",
-      "1 tbsp Ras el Hanout spice blend", "1 tsp turmeric",
-      "1 tsp cumin", "1 tsp coriander",
-      "Large pinch saffron", "3 tbsp olive oil",
-      "Fresh coriander & mint", "Couscous to serve"
+      "2 onions, diced","4 garlic cloves",
+      "1-inch fresh ginger, grated","2 preserved lemon quarters",
+      "100g green olives","400ml lamb or chicken stock",
+      "1 tbsp Ras el Hanout spice blend","1 tsp turmeric",
+      "1 tsp cumin","1 tsp coriander",
+      "Large pinch saffron","3 tbsp olive oil",
+      "Fresh coriander & mint","Couscous to serve"
     ],
     steps: [
       "Steep saffron in 3 tbsp warm water for 10 minutes.",
