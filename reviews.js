@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   SAVEUR  ·  reviews.js
+   Recipe  ·  reviews.js
    Handles: read / write reviews from localStorage,
             render review form, render review list,
             interactive star picker, submit logic
