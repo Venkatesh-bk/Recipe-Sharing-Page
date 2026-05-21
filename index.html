@@ -23,7 +23,7 @@
       </ul>
       <div class="nav-actions">
         <button class="btn-ghost" onclick="App.openRandom()">Surprise Me</button>
-        <button class="btn-primary" onclick="document.getElementById('discover').scrollIntoView({behavior:'smooth'})">Browse Recipes</button>
+        <button class="btn-primary" onclick="document.getElementById('discover').scrollIntoView({ behavior:'smooth' })">Browse Recipes</button>
       </div>
     </div>
   </nav>
@@ -35,7 +35,7 @@
       <h1>Discover the Art of<br><em>World Cuisine</em></h1>
       <p>Hand-curated recipes with authentic origins, step-by-step methods, nutritional benefits, and real community reviews.</p>
       <div class="hero-actions">
-        <button class="btn-hero-primary" onclick="document.getElementById('discover').scrollIntoView({behavior:'smooth'})">
+        <button class="btn-hero-primary" onclick="document.getElementById('discover').scrollIntoView({ behavior:'smooth' })">
           Explore Recipes <span>→</span>
         </button>
         <button class="btn-hero-ghost" onclick="App.openRandom()">Random Recipe</button>
@@ -57,15 +57,21 @@
   <section class="discover-section" id="discover">
     <div class="container">
 
+      <!-- Search -->
       <div class="search-wrapper">
         <div class="search-box">
           <span class="search-icon">🔍</span>
-          <input type="search" id="searchInput" placeholder="Search by name, ingredient, or cuisine…"
-            oninput="App.filterRecipes()" autocomplete="off">
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search by name, ingredient, or cuisine…"
+            oninput="App.filterRecipes()"
+            autocomplete="off">
           <button class="search-clear" id="searchClear" onclick="App.clearSearch()" style="display:none">✕</button>
         </div>
       </div>
 
+      <!-- Filters -->
       <div class="filter-section">
         <div class="filter-row">
           <span class="filter-label">Diet</span>
@@ -78,22 +84,23 @@
         <div class="filter-row">
           <span class="filter-label">Cuisine</span>
           <div class="filter-chips" id="cuisineChips">
-            <button class="chip active" data-cuisine="all"         onclick="App.setCuisine(this)">🍽 All</button>
-            <button class="chip"        data-cuisine="Chinese"      onclick="App.setCuisine(this)">🇨🇳 Chinese</button>
-            <button class="chip"        data-cuisine="North Indian" onclick="App.setCuisine(this)">🇮🇳 North Indian</button>
-            <button class="chip"        data-cuisine="South Indian" onclick="App.setCuisine(this)">🌴 South Indian</button>
-            <button class="chip"        data-cuisine="Italian"      onclick="App.setCuisine(this)">🇮🇹 Italian</button>
-            <button class="chip"        data-cuisine="French"       onclick="App.setCuisine(this)">🇫🇷 French</button>
-            <button class="chip"        data-cuisine="Russian"      onclick="App.setCuisine(this)">🇷🇺 Russian</button>
-            <button class="chip"        data-cuisine="American"     onclick="App.setCuisine(this)">🇺🇸 American</button>
-            <button class="chip"        data-cuisine="European"     onclick="App.setCuisine(this)">🌍 European</button>
-            <button class="chip"        data-cuisine="Western"      onclick="App.setCuisine(this)">🍴 Western</button>
-            <button class="chip"        data-cuisine="Healthy"      onclick="App.setCuisine(this)">🥗 Healthy</button>
-            <button class="chip"        data-cuisine="Traditional"  onclick="App.setCuisine(this)">🏺 Traditional</button>
+            <button class="chip active" data-cuisine="all"          onclick="App.setCuisine(this)">🍽 All</button>
+            <button class="chip"        data-cuisine="Chinese"       onclick="App.setCuisine(this)">🇨🇳 Chinese</button>
+            <button class="chip"        data-cuisine="North Indian"  onclick="App.setCuisine(this)">🇮🇳 North Indian</button>
+            <button class="chip"        data-cuisine="South Indian"  onclick="App.setCuisine(this)">🌴 South Indian</button>
+            <button class="chip"        data-cuisine="Italian"       onclick="App.setCuisine(this)">🇮🇹 Italian</button>
+            <button class="chip"        data-cuisine="French"        onclick="App.setCuisine(this)">🇫🇷 French</button>
+            <button class="chip"        data-cuisine="Russian"       onclick="App.setCuisine(this)">🇷🇺 Russian</button>
+            <button class="chip"        data-cuisine="American"      onclick="App.setCuisine(this)">🇺🇸 American</button>
+            <button class="chip"        data-cuisine="European"      onclick="App.setCuisine(this)">🌍 European</button>
+            <button class="chip"        data-cuisine="Western"       onclick="App.setCuisine(this)">🍴 Western</button>
+            <button class="chip"        data-cuisine="Healthy"       onclick="App.setCuisine(this)">🥗 Healthy</button>
+            <button class="chip"        data-cuisine="Traditional"   onclick="App.setCuisine(this)">🏺 Traditional</button>
           </div>
         </div>
       </div>
 
+      <!-- Results bar -->
       <div class="results-bar">
         <span id="resultsCount">Showing 22 recipes</span>
         <div class="sort-row">
@@ -107,8 +114,10 @@
         </div>
       </div>
 
+      <!-- Grid -->
       <div class="recipe-grid" id="recipeGrid"></div>
 
+      <!-- Empty state -->
       <div class="no-results" id="noResults" style="display:none">
         <span>🔍</span>
         <h3>No recipes found</h3>
@@ -150,6 +159,7 @@
     </div>
   </div>
 
+  <!-- TOAST -->
   <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
 
   <!-- Scripts: data must load first -->
